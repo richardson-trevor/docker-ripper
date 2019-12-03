@@ -22,12 +22,13 @@ To add your purchased license key to MakeMKV/Ripper add it to the `enter-your-ke
 
 ```
 docker run -d \
-  --name="Ripper" \
-  -v /path/to/config/:/config:rw \
-  -v /path/to/rips/:/out:rw \
-  --device=/dev/sr0:/dev/sr0 \
-  rix1337/docker-ripper
-  ```
+  --name="ripper" \
+  -v /path/to/place/config:/config:rw \
+  -v /base/media/dir:/out:rw \
+  --device /dev/sr0 \
+  --device /dev/sg2 \
+  ripper/full
+```
 
 # FAQ
 
